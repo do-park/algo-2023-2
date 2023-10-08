@@ -30,11 +30,11 @@ while dq:
             dq.append([ny, nx])
             done += 1
 
-result = 0
+RESULT = 0
 total = M * N
 if done + empty == total:
     for v in visited:
-        result = max(result, max(v))
-    print(result - 1)
+        RESULT = max(RESULT, max(v))
+    print(RESULT - 1)
 elif done + empty < total:
     print(-1)

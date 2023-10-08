@@ -10,13 +10,13 @@ for tc in range(T):
         c, r = map(int, input().split())
         MAT[r][c] = 1
 
-    result = 0
+    RESULT = 0
     dq = deque()
     visited = [[0] * M for _ in range(N)]
     for n in range(N):
         for m in range(M):
             if MAT[n][m] and not visited[n][m]:
-                result += 1
+                RESULT += 1
                 visited[n][m] = 1
                 dq.append([n, m])
                 while dq:
@@ -26,4 +26,4 @@ for tc in range(T):
                         if 0 <= ny < N and 0 <= nx < M and MAT[ny][nx] and not visited[ny][nx]:
                             visited[ny][nx] = 1
                             dq.append([ny, nx])
-    print(result)
+    print(RESULT)
