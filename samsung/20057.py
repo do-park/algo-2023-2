@@ -11,7 +11,7 @@ matrix = [list(map(int, input().split())) for _ in range(N)]
 RESULT = 0
 y, x = N // 2, N // 2
 d = -1
-
+   
 # [y축, x축, 비율]
 XP = [
     [-2, 0, 0.02],
